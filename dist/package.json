@@ -1,5 +1,5 @@
 {
-  "name": "@api/lib",
+  "name": "frontend-setup-api",
   "version": "0.0.1",
   "description": "API class utils",
   "main": "lib/es5/index.js",
