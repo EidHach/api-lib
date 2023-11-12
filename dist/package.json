@@ -1,0 +1,30 @@
+{
+  "name": "@api/lib",
+  "version": "0.0.1",
+  "description": "API class utils",
+  "main": "lib/es5/index.js",
+  "module": "lib/es6/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EidHach/api-lib"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "javascript",
+    "utils",
+    "utilities"
+  ],
+  "author": "Eid Hachem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EidHach/api-lib/issues"
+  },
+  "homepage": "https://github.com/EidHach/api-lib#readme"
+}
