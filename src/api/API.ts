@@ -33,9 +33,34 @@ export class API {
     this.axiosInstance.interceptors.request.use((axiosConfig) => {
       if (this.authToken) {
         axiosConfig.headers['Authorization'] = `Bearer ${this.authToken}`;
+        /// allow all origins
+        
       }
       return axiosConfig;
     });
+  }
+
+  public static setHeaders(headers: Record<string, string>): void {
+    this.axiosInstance.defaults.headers.common = {
+      ...this.axiosInstance.defaults.headers.common,
+      ...headers,
+    };
+  }
+
+  public static addInterceptors(interceptor: any): void {
+    this.axiosInstance.interceptors.request.use(interceptor);
+  }
+
+  public static removeInterceptors(interceptor: any): void {
+    this.axiosInstance.interceptors.request.eject(interceptor);
+  }
+
+  public static addPostInterceptors(interceptor: any): void {
+    this.axiosInstance.interceptors.response.use(interceptor);
+  }
+
+  public static removePostInterceptors(interceptor: any): void {
+    this.axiosInstance.interceptors.response.eject(interceptor);
   }
 
   public static updateAuthToken(authToken: string | undefined): void {
