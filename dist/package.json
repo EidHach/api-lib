@@ -1,6 +1,6 @@
 {
   "name": "frontend-setup-api",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "API class utils",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",

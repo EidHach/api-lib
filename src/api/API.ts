@@ -112,9 +112,10 @@ export class API {
 
   public static async get<T>(
     url: string,
-    params?: object
+    params?: object,
+    cancelTokenSource?: CancelTokenSource
   ): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>('get', url, undefined, params)
+    return this.makeRequest<T>('get', url, undefined, params, cancelTokenSource)
   }
 
   public static async post<T>(
