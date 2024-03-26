@@ -1,10 +1,10 @@
 import { ApiResponse } from './API';
 
 export class ApiError extends Error {
-  status: number;
+  status: number | string;
   data: any;
 
-  constructor(status: number, message: string, data: any = null) {
+  constructor(status: number | string, message: string, data: any = null) {
     super(message);
     this.status = status;
     this.name = 'ApiError';
